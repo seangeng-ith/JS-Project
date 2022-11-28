@@ -10,8 +10,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     background-color: rgb(24, 24, 66);
-
+    z-index: 999;
+    position: fixed;
     .nav-left {
         display: flex;
         flex: 0.5;
