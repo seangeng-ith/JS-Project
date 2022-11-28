@@ -79,28 +79,26 @@ header img {
   margin: 10px;
   padding: 10px;
 }
-.popular-brand #brand-name {
+.popular-brand .brand {
+  display: flex;
+}
+.popular-brand .brand #sub-brand {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.popular-brand #brand-name img {
-  width: 15%;
+.popular-brand .brand #sub-brand img {
+  width: 75%;
   border-radius: 50%;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  padding: 10px;
-  background-color: aqua;
-  height: 50vh;
 }
 .container .card {
   display: flex;
-  padding: 10px;
-  height: 100%;
+  min-height: 10rem;
 }
 .container .card #sub-card {
   border-radius: 10px;
@@ -108,7 +106,28 @@ header img {
   background-color: rgb(197, 208, 212);
   width: 18%;
 }
+.container .card #sub-card span, .container .card #sub-card i {
+  color: rgb(235, 112, 4);
+}
+.container .card #sub-card p, .container .card #sub-card i {
+  margin: 10px;
+}
 .container .card #sub-card img {
   width: 100%;
   border-radius: 10px 10px 0px 0px;
+}
+.container .card #sub-card .star {
+  display: flex;
+  padding: 0;
+}
+.container .card #sub-card .sub-card-button {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .card #sub-card .sub-card-button button {
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }/*# sourceMappingURL=main.css.map */

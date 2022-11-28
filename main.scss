@@ -101,38 +101,60 @@ header {
     margin: 10px;
     padding: 10px;
 
-    #brand-name {
-        img {
-            width: 15%;
-            border-radius: 50%;
-        }
-
+    .brand {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        #sub-brand {
+            img {
+                width: 75%;
+                border-radius: 50%;
+            }
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
+
 
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    margin: 10px;
-    padding: 10px;
-    background-color: aqua;
-    height: 50vh;
+    // height: 50vh;
     .card {
         display: flex;
-        padding: 10px;
-        height: 100%;
+        min-height: 10rem;
         #sub-card {
             border-radius: 10px;
             margin: 10px;
             background-color: rgb(197, 208, 212);
             width: 18%;
+            span,i{
+                color: rgb(235, 112, 4);
+            }
+            p,i{
+                margin: 10px;
+            }
             img {
                 width: 100%;
-                border-radius: 10px 10px 0px 0px ;
+                border-radius: 10px 10px 0px 0px;
+            }
+            .star{
+                display: flex;
+                padding: 0;
+            
+            }
+            .sub-card-button{
+                margin: 10px;
+                display: flex;
+                justify-content: space-between;
+                button{
+                    padding: 10px 20px 10px 20px ;
+                    border: none;
+                    border-radius: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+                }
             }
         }
     }
