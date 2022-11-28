@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100vh;
+}
+
+/// menu bar .......................
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(24, 24, 66);
+
+    .nav-left {
+        display: flex;
+        flex: 0.5;
+    }
+
+    .nav-center {
+        flex: 1;
+        width: 100%;
+        display: flex;
+
+        div {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            input {
+                width: 70%;
+                margin: 0;
+                padding: 13px;
+            }
+
+            i {
+                border-radius: 0px 10px 10px 0px;
+                background-color: orange;
+                padding: 10px;
+            }
+        }
+
+        #cetagories {
+            margin: 0;
+            padding: 10px;
+            border-radius: 10px 0px 0px 10px;
+        }
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 0.5;
+        color: white;
+
+        .shipping {
+            div {
+                display: flex;
+                align-items: center;
+
+                p,
+                img {
+                    padding: 0px 15px 0px 15px;
+                }
+            }
+
+        }
+
+        .cart {
+            i {
+                padding: 13px;
+            }
+        }
+
+        .account {
+            div {
+                display: flex;
+                align-items: center;
+                padding: 0px 15px 0px 15px;
+            }
+        }
+
+        .account :hover,
+        .shipping :hover,
+        .cart :hover {
+            background-color: orange;
+        }
+    }
+}
+
+header {
+    img {
+        width: 100%;
+    }
+}
+
+.popular-brand {
+    border-radius: 10px;
+    background-color: lightgray;
+    margin: 10px;
+    padding: 10px;
+
+    #brand-name {
+        img {
+            width: 15%;
+            border-radius: 50%;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    background-color: aqua;
+    height: 50vh;
+    .card {
+        display: flex;
+        padding: 10px;
+        height: 100%;
+        #sub-card {
+            border-radius: 10px;
+            margin: 10px;
+            background-color: rgb(197, 208, 212);
+            width: 18%;
+            img {
+                width: 100%;
+                border-radius: 10px 10px 0px 0px ;
+            }
+        }
+    }
+}
