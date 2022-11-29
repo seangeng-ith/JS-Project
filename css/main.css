@@ -50,13 +50,32 @@ nav .nav-right {
   flex: 0.5;
   color: white;
 }
-nav .nav-right .shipping div {
+nav .nav-right .shipping .currency-show {
   display: flex;
   align-items: center;
 }
-nav .nav-right .shipping div p,
-nav .nav-right .shipping div img {
+nav .nav-right .shipping .currency-show p,
+nav .nav-right .shipping .currency-show img {
   padding: 0px 15px 0px 15px;
+}
+nav .nav-right .shipping .shipping-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  width: 200px;
+  height: 7rem;
+  color: black;
+  position: absolute;
+}
+nav .nav-right .shipping .shipping-option div {
+  display: flex;
+  flex-direction: column;
+}
+nav .nav-right .shipping .shipping-option div select {
+  margin: 5px 0px 5px 0px;
+  padding: 5px;
 }
 nav .nav-right .cart i {
   padding: 13px;
@@ -67,7 +86,7 @@ nav .nav-right .account div {
   padding: 0px 15px 0px 15px;
 }
 nav .nav-right .account :hover,
-nav .nav-right .shipping :hover,
+nav .nav-right .currency-show:hover,
 nav .nav-right .cart :hover {
   background-color: orange;
 }
@@ -100,23 +119,29 @@ header img {
   flex-direction: column;
 }
 .container .card {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   min-height: 10rem;
 }
 .container .card #sub-card {
   border-radius: 10px;
   margin: 10px;
   background-color: rgb(197, 208, 212);
-  width: 18%;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  width: 90%;
+  transition: transform 0.3s;
 }
-.container .card #sub-card span, .container .card #sub-card i {
+.container .card #sub-card span,
+.container .card #sub-card i {
   color: rgb(235, 112, 4);
 }
-.container .card #sub-card p, .container .card #sub-card i {
-  margin: 10px;
+.container .card #sub-card p,
+.container .card #sub-card i {
+  margin: 5px;
 }
 .container .card #sub-card img {
   width: 100%;
+  height: 220px;
   border-radius: 10px 10px 0px 0px;
 }
 .container .card #sub-card .star {
@@ -136,6 +161,9 @@ header img {
 }
 .container .card #sub-card .sub-card-button button:hover {
   background-color: orange;
+}
+.container .card #sub-card:hover {
+  transform: scale(1.06);
 }
 .container #sub-card:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;

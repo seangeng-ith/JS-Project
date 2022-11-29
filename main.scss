@@ -14,6 +14,7 @@ nav {
     background-color: rgb(24, 24, 66);
     z-index: 999;
     position: fixed;
+
     .nav-left {
         display: flex;
         flex: 0.5;
@@ -57,7 +58,7 @@ nav {
         color: white;
 
         .shipping {
-            div {
+            .currency-show {
                 display: flex;
                 align-items: center;
 
@@ -67,6 +68,27 @@ nav {
                 }
             }
 
+            .shipping-option {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: rgb(255, 255, 255);
+                padding: 10px;
+                width: 200px;
+                height: 7rem;
+                color: black;
+                position: absolute;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+
+                    select {
+                        margin: 5px 0px 5px 0px;
+                        padding: 5px;
+                    }
+                }
+            }
         }
 
         .cart {
@@ -84,7 +106,7 @@ nav {
         }
 
         .account :hover,
-        .shipping :hover,
+        .currency-show:hover,
         .cart :hover {
             background-color: orange;
         }
@@ -105,6 +127,7 @@ header {
 
     .brand {
         display: flex;
+
         #sub-brand {
             img {
                 width: 75%;
@@ -123,47 +146,64 @@ header {
 .container {
     display: flex;
     flex-direction: column;
+
     // height: 50vh;
     .card {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         min-height: 10rem;
+
         #sub-card {
             border-radius: 10px;
             margin: 10px;
             background-color: rgb(197, 208, 212);
-            width: 18%;
-            span,i{
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            width: 90%;
+            transition: transform .3s;
+            span,
+            i {
                 color: rgb(235, 112, 4);
             }
-            p,i{
-                margin: 10px;
+
+            p,
+            i {
+                margin: 5px;
             }
+
             img {
                 width: 100%;
+                height: 220px;
                 border-radius: 10px 10px 0px 0px;
             }
-            .star{
+
+            .star {
                 display: flex;
                 padding: 0;
-            
             }
-            .sub-card-button{
+
+            .sub-card-button {
                 margin: 10px;
                 display: flex;
                 justify-content: space-between;
-                button{
-                    padding: 10px 20px 10px 20px ;
+
+                button {
+                    padding: 10px 20px 10px 20px;
                     border: none;
                     border-radius: 10px;
                     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
                 }
-                button:hover{
+
+                button:hover {
                     background-color: orange;
                 }
             }
         }
+        #sub-card:hover{
+            transform: scale(1.06);
+        }
     }
-    #sub-card:hover{
+
+    #sub-card:hover {
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
 }
