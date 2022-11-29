@@ -72,10 +72,11 @@ nav {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                background-color:white;
+                background-color: white;
+                border-radius: 0px 0px 10px 10px;
                 padding: 10px;
                 width: 200px;
-                height: 9rem;
+                height: 11rem;
                 color: black;
                 position: absolute;
 
@@ -83,29 +84,37 @@ nav {
                     display: flex;
                     flex-direction: column;
 
-                    select,button {
+                    select {
                         margin: 5px 0px 5px 0px;
-                        padding: 5px;
+                        padding: 10px 20px 10px 20px;
+                        border-radius: 10px;
+                        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
                     }
-                    button{
+
+                    button {
+                        margin-top: 5px;
                         background-color: orange;
-                        border: none;
+                        padding: 10px 20px 10px 20px;
+                        border-radius: 10px;
+                        border: 1px solid black;
+                        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
                     }
                 }
             }
         }
 
         .cart {
-            
+
             i {
                 padding: 13px;
-                
+
             }
-            p{
+
+            p {
                 position: absolute;
                 top: -3px;
                 right: 118px;
-                padding: 5px ;
+                padding: 5px;
                 font-size: 0.6vw;
                 background-color: orange;
                 border-radius: 50%;
@@ -118,29 +127,35 @@ nav {
                 align-items: center;
                 padding: 0px 15px 0px 15px;
             }
-            .user-account-main{
+
+            .user-account-main {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 background-color: white;
-                padding: 20px;
+                border-radius: 0px 0px 10px 10px;
+                padding: 10px;
                 width: 200px;
                 position: absolute;
                 right: 0.1px;
-                height: 100px;
-                button{
-                    padding: 10px;
+                height: 120px;
+
+                button {
+                    width: 100%;
+                    padding: 10px 20px 10px 20px;
+                    border: none;
+                    border-radius: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
                 }
-                div{
-                    display: flex;
-                    justify-content: space-evenly;
-                    button{
-                        width: 100%;
-        
-                    }
+
+                button:hover {
+                    background-color: orange;
+                    color: white;
                 }
             }
-            .user-account-main{
+
+            .user-account-main {
                 display: none;
             }
         }
@@ -149,13 +164,16 @@ nav {
         .cart:hover {
             color: orange;
         }
-        .cart:hover div p{
+
+        .cart:hover div p {
             background-color: white;
             color: orange;
         }
-        .account:hover{
+
+        .account:hover {
             color: orange;
-            .user-account-main{
+
+            .user-account-main {
                 display: flex;
             }
         }
@@ -209,6 +227,7 @@ header {
             box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
             width: 90%;
             transition: transform .3s;
+
             span,
             i {
                 color: rgb(235, 112, 4);
@@ -247,7 +266,8 @@ header {
                 }
             }
         }
-        #sub-card:hover{
+
+        #sub-card:hover {
             transform: scale(1.06);
         }
     }

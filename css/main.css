@@ -63,9 +63,10 @@ nav .nav-right .shipping .shipping-option {
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
+  border-radius: 0px 0px 10px 10px;
   padding: 10px;
   width: 200px;
-  height: 9rem;
+  height: 11rem;
   color: black;
   position: absolute;
 }
@@ -73,13 +74,19 @@ nav .nav-right .shipping .shipping-option div {
   display: flex;
   flex-direction: column;
 }
-nav .nav-right .shipping .shipping-option div select, nav .nav-right .shipping .shipping-option div button {
+nav .nav-right .shipping .shipping-option div select {
   margin: 5px 0px 5px 0px;
-  padding: 5px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 nav .nav-right .shipping .shipping-option div button {
+  margin-top: 5px;
   background-color: orange;
-  border: none;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 nav .nav-right .cart i {
   padding: 13px;
@@ -101,23 +108,25 @@ nav .nav-right .account .user {
 nav .nav-right .account .user-account-main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: white;
-  padding: 20px;
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px;
   width: 200px;
   position: absolute;
   right: 0.1px;
-  height: 100px;
+  height: 120px;
 }
 nav .nav-right .account .user-account-main button {
-  padding: 10px;
-}
-nav .nav-right .account .user-account-main div {
-  display: flex;
-  justify-content: space-evenly;
-}
-nav .nav-right .account .user-account-main div button {
   width: 100%;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+nav .nav-right .account .user-account-main button:hover {
+  background-color: orange;
+  color: white;
 }
 nav .nav-right .account .user-account-main {
   display: none;
