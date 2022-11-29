@@ -84,15 +84,57 @@ nav .nav-right .shipping .shipping-option div button {
 nav .nav-right .cart i {
   padding: 13px;
 }
-nav .nav-right .account div {
+nav .nav-right .cart p {
+  position: absolute;
+  top: -3px;
+  right: 118px;
+  padding: 5px;
+  font-size: 0.6vw;
+  background-color: orange;
+  border-radius: 50%;
+}
+nav .nav-right .account .user {
   display: flex;
   align-items: center;
   padding: 0px 15px 0px 15px;
 }
-nav .nav-right .account :hover,
+nav .nav-right .account .user-account-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  width: 200px;
+  position: absolute;
+  right: 0.1px;
+  height: 100px;
+}
+nav .nav-right .account .user-account-main button {
+  padding: 10px;
+}
+nav .nav-right .account .user-account-main div {
+  display: flex;
+  justify-content: space-evenly;
+}
+nav .nav-right .account .user-account-main div button {
+  width: 100%;
+}
+nav .nav-right .account .user-account-main {
+  display: none;
+}
 nav .nav-right .currency-show:hover,
-nav .nav-right .cart :hover {
-  background-color: orange;
+nav .nav-right .cart:hover {
+  color: orange;
+}
+nav .nav-right .cart:hover div p {
+  background-color: white;
+  color: orange;
+}
+nav .nav-right .account:hover {
+  color: orange;
+}
+nav .nav-right .account:hover .user-account-main {
+  display: flex;
 }
 
 header img {

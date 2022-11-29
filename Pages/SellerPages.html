@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.min.css">
+    <script src="../JS/script.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html"><img src="Images/shopping-mall-logo.png" alt=""></a>
+        </div>
+        <div class="nav-center">
+            <select name="categories" id="categories">
+                <option value="all-categories">All-categories</option>
+                <option value="men-fashion">Men-fashion</option>
+                <option value="women-fashion">women-fashion</option>
+                <option value="computer">Computer</option>
+                <option value="toys">Toys</option>
+                <option value="phones">Phones</option>
+                <option value="electronic">Electronic</option>
+            </select>
+            <div>
+                <input type="text" name="search" id="search" placeholder="What are you looking for.........">
+                <i class="material-icons">search</i>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="shipping">
+                <div class="currency-show">
+                    <img src="images/cambodia.png" alt="" id="country">
+                    <p>/</p>
+                    <p id="currency">USD</p>
+                </div>
+                <div class="shipping-option">
+                    <div>
+                        <label for="ship">Shipping to</label>
+                        <select name="shapping" id="ship">
+                            <option value="cambodia">cambodia</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">Currency</label>
+                        <select name="currency" id="country-currency">
+                            <option value="USD">USD (US Dollar)</option>
+                            <option value="KHR">KHR (KH Riel)</option>
+                        </select>
+                        <button id="save" st>Save</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart">
+                <i class="material-icons">local_grocery_store</i>
+                <div>
+                    <p>00</p>
+                </div>
+            </div>
+            <div class="account">
+                <div class="user">
+                    <i class="material-icons">perm_identity</i>
+                    <p>Account</p>
+                </div>
+                <div class="user-account-main">
+                    <button>Customer</button>
+                    <button>Seller</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

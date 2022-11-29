@@ -96,23 +96,68 @@ nav {
         }
 
         .cart {
+            
             i {
                 padding: 13px;
+                
+            }
+            p{
+                position: absolute;
+                top: -3px;
+                right: 118px;
+                padding: 5px ;
+                font-size: 0.6vw;
+                background-color: orange;
+                border-radius: 50%;
             }
         }
 
         .account {
-            div {
+            .user {
                 display: flex;
                 align-items: center;
                 padding: 0px 15px 0px 15px;
             }
+            .user-account-main{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: white;
+                padding: 20px;
+                width: 200px;
+                position: absolute;
+                right: 0.1px;
+                height: 100px;
+                button{
+                    padding: 10px;
+                }
+                div{
+                    display: flex;
+                    justify-content: space-evenly;
+                    button{
+                        width: 100%;
+        
+                    }
+                }
+            }
+            .user-account-main{
+                display: none;
+            }
         }
 
-        .account :hover,
         .currency-show:hover,
-        .cart :hover {
-            background-color: orange;
+        .cart:hover {
+            color: orange;
+        }
+        .cart:hover div p{
+            background-color: white;
+            color: orange;
+        }
+        .account:hover{
+            color: orange;
+            .user-account-main{
+                display: flex;
+            }
         }
     }
 }
