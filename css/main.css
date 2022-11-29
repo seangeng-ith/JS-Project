@@ -62,10 +62,10 @@ nav .nav-right .shipping .shipping-option {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   padding: 10px;
   width: 200px;
-  height: 7rem;
+  height: 9rem;
   color: black;
   position: absolute;
 }
@@ -73,9 +73,13 @@ nav .nav-right .shipping .shipping-option div {
   display: flex;
   flex-direction: column;
 }
-nav .nav-right .shipping .shipping-option div select {
+nav .nav-right .shipping .shipping-option div select, nav .nav-right .shipping .shipping-option div button {
   margin: 5px 0px 5px 0px;
   padding: 5px;
+}
+nav .nav-right .shipping .shipping-option div button {
+  background-color: orange;
+  border: none;
 }
 nav .nav-right .cart i {
   padding: 13px;

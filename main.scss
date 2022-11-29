@@ -72,10 +72,10 @@ nav {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                background-color: rgb(255, 255, 255);
+                background-color:white;
                 padding: 10px;
                 width: 200px;
-                height: 7rem;
+                height: 9rem;
                 color: black;
                 position: absolute;
 
@@ -83,9 +83,13 @@ nav {
                     display: flex;
                     flex-direction: column;
 
-                    select {
+                    select,button {
                         margin: 5px 0px 5px 0px;
                         padding: 5px;
+                    }
+                    button{
+                        background-color: orange;
+                        border: none;
                     }
                 }
             }
