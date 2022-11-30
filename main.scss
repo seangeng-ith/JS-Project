@@ -220,9 +220,11 @@ header {
 
 }
 
-.container {
+.container,
+.container-seller {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     // height: 50vh;
     .card {
@@ -231,6 +233,8 @@ header {
         min-height: 10rem;
 
         #sub-card {
+            display: flex;
+            flex-direction: column;
             border-radius: 10px;
             margin: 10px;
             box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -284,65 +288,164 @@ header {
     #sub-card:hover {
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
+
+    div {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+
+        h1 {
+            margin-left: 40%;
+        }
+
+        .add-product {
+            margin-left: 30%;
+            width: 150px;
+            padding: 15px;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            border-radius: 10px;
+            background-color: orange;
+            border: none;
+        }
+    }
+
 }
 
 //Seller pages----------------------------------
-.seller-container {
-    color: black;
-    background-color: black;
-}
 
 // Form input product-----------------------------
-
-dialog {
+#add-product-dialog {
     position: fixed;
-    top: 10vh;
-    left: 20%;
-    width: 60%;
-    z-index: 100;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    overflow: hidden;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    top: 0;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.877);
+    z-index: 99;
 
-    header {
-        background-color: darkblue;
-        padding-top: 20px;
-        height: 50px;
-        text-align: center;
-        font-size: larger;
-        color: white;
-    }
-
-    section {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        padding: 20px;
-
-        input {
-            padding: 10px;
-        }
-
-        select {
-            padding: 10px;
-            width: 200px;
-        }
-    }
-
-    menu {
-        padding: 1rem;
-        display: flex;
-        justify-content: flex-end;
+    dialog {
+        position: fixed;
+        top: 10vh;
+        left: 20%;
+        width: 60%;
+        z-index: 100;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+        overflow: hidden;
+        align-items: center;
         margin: 0;
-        button{
+        padding: 0;
+        color: rgba(0, 0, 0, 0.63);
+        button:hover{
+            background-color: orange;
+        }
+        header {
+            background-color: darkblue;
+            padding-top: 20px;
+            height: 50px;
+            text-align: center;
+            font-size: larger;
+            color: white;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 20px;
+
+            input {
+                padding: 10px;
+            }
+
+            select {
+                padding: 10px;
+                width: 200px;
+            }
+        }
+
+        menu {
+            padding: 1rem;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+
+            button {
+                padding: 10px;
+                width: 100px;
+                margin: 5px;
+                border-radius: 10px;
+                box-shadow: rgba(212, 43, 43, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+                border: none;
+                background-color: #41BBFF;
+            }
+        }
+
+    }
+}
+
+
+
+// Table-------------------------------------------------------------
+table {
+    border: 1px solid black;
+    width: 90%;
+    border-collapse: collapse;
+    text-align: center;
+
+    thead {
+        background-color: darkblue;
+        color: white;
+        font-size: larger;
+
+        td {
             padding: 10px;
-            width: 100px;
-            margin: 5px;
+            border: 1px solid black;
         }
     }
 
+    tr {
+        td {
+            border: 1px solid black;
+        }
+
+        td:nth-child(2) {
+            img {
+                width: 150px;
+            }
+        }
+
+        td:last-child {
+            div {
+                margin-bottom: 10%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    width: 80%;
+                    padding: 10px;
+                    margin-top: 10px;
+                    border: none;
+                    border-radius: 10px;
+                    box-shadow: rgba(212, 43, 43, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+                }
+
+                .delete {
+                    background-color: #FF4141;
+                    color: white;
+                }
+
+                .edit {
+                    background-color: #41BBFF;
+                    color: white;
+                }
+            }
+
+        }
+    }
 }
