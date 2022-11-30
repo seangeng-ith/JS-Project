@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller</title>
+    <title>Cart Page</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.min.css">
     <script src="../JS/script.js" defer type="module"></script>
@@ -34,7 +34,7 @@
         <div class="nav-right">
             <div class="shipping">
                 <div class="currency-show">
-                    <img src="../images/cambodia.png" alt="" id="country">
+                    <img src="../Images/cambodia.png" alt="" id="country">
                     <p>/</p>
                     <p id="currency">USD</p>
                 </div>
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="cart">
-                <a href="../Pages/cartPage.html"><i class="material-icons">local_grocery_store</i></a>
+                <i class="material-icons">local_grocery_store</i>
                 <div>
                     <p>00</p>
                 </div>
@@ -68,51 +68,51 @@
                 </div>
                 <div class="user-account-main">
                     <a href="../index.html"><button>Customer</button></a>
-                    <a href="SellerPages.html"><button>Seller</button></a>
+                    <a href="../Pages/SellerPages.html"><button>Seller</button></a>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="container-seller">
-        <div id="add-product-dialog" style="display: none;">
-            <dialog open>
-                <header>Create new product</header>
-                <section>
-                    <label>Name</label>
-                    <input id="name" type="text" placeholder="Name of the prodcut" />
-
-                    <label>Description</label>
-                    <input id="description" type="text" placeholder="Write your description" />
-                    <label>Price</label>
-                    <input id="price" type="number" placeholder="Input price" />
-                    <label for="">Size</label>
-                    <input type="text" name="" id="size" placeholder="Input size">
-                    <label for="">Type</label>
-                    <input type="text" id="type" placeholder="Input the Type">
-                    <label for="">Currency</label>
-                    <select id="currency">
-                        <option value="USD">USD (US Dollar)</option>
-                        <option value="KHR">KHR (KH Riel)</option>
-                    </select>
-
-                </section>
-
-                <menu>
-
-                    <button id="cancel">Cancel</button>
-
-                    <button id="edit">Edit</button>
-
-                    <button id="create">Create</button>
-
-                </menu>
-            </dialog>
+    <div class="container-shopping-cart">
+        <div class="shopping-cart">
+            <div class="header-shopping-cart">
+                <h1>Shopping Cart</h1>
+                <p>1 item</p>
+            </div>
+            <table>
+                <thead>
+                    <td>Product Name & Detials</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Total</td>
+                    <td></td>
+                </thead>
+                <tr>
+                    <td>
+                        <div class="product-name-detials">
+                            <img src="../Images/hoodie.jpg" alt="" id="shopping-cart-product-image">
+                            <div>
+                                <h4>Hoodie</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, tempora!</p>
+                                <p>size</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>$12</td>
+                    <td>2</td>
+                    <td>$123</td>
+                    <td><button>Remove</button></td>
+                </tr>
+            </table>
+            <div class="total-price">
+                <p>Total price:</p>
+                <p><span>$1234</span></p>
+            </div>
+            <div class="footer-shopping-cart">
+                <button class="back">Back to shopping</button>
+                <button class="Checkout">Checkout</button>
+            </div>
         </div>
-        <div class="contain-product-list">
-            <h1>PRODUCT LIST</h1>
-            <button class="add-product">Add Product</button>
-        </div>
-        <table id="table-list-product"></table>
     </div>
 </body>
 

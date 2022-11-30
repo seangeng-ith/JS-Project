@@ -18,7 +18,8 @@ const button_create = document.querySelector('#create');
 const button_edit = document.querySelector("#edit");
 const button_cancel = document.querySelector("#cancel");
 const button_add_product = document.querySelector('.add-product')
-
+const button_add_to_cart = document.querySelector('#add-cart')
+const button_detial = document.querySelector("#btn-detial")
 //------------------------------------------------
 // MENU BAR
 //------------------------------------------------
@@ -32,6 +33,7 @@ let product = [
         PRICE: 19,
         SIZE: 7,
         TYPE: 'shoes',
+        CURRENCY: 'USD'
     },
     {
         ID: 1,
@@ -40,6 +42,7 @@ let product = [
         PRICE: 19,
         SIZE: 7,
         TYPE: 'shoes',
+        CURRENCY: 'USD'
     },
     {
         ID: 1,
@@ -48,8 +51,10 @@ let product = [
         PRICE: 19,
         SIZE: 7,
         TYPE: 'shoes',
+        CURRENCY: 'USD'
     }
 ]
+
 
 console.log(product)
 // LOCAL STORAGE---------------------------------
@@ -59,9 +64,10 @@ function saveProduct() {
 
 function loadProduct() {
     let productStorage = JSON.parse(localStorage.getItem("product"));
-    product =productStorage ;
+    product = productStorage;
 }
 
+// Create product ----------------------------------------
 function onCreate() {
     let new_product = {}
     new_product.NAME = document.getElementById('name').value;
@@ -70,22 +76,24 @@ function onCreate() {
     new_product.DESCRIPTION = document.getElementById('description').value;
     new_product.PRICE = document.getElementById('price').value;
     new_product.CURRENCY = document.getElementById('currency').value;
-    console.log(new_product)
+
     product.push(new_product)
-    product.push(new_product)
-    renderProduct()
     saveProduct()
+    renderProduct()
     hide(add_product_form)
 }
-function removeProduct(event) {
 
+// Remove product from the list---------------------------------
+function removeProduct(event) {
     let index = event.target.id;
     product.splice(index, 1);
     console.log(index)
     saveProduct();
     renderProduct();
 }
-function editProduct(){
+
+// Edit the product that you select----------------------------
+function editProduct() {
     show(add_product_form)
     button_create.style.display = 'none';
     button_edit.style.display = 'block';
@@ -97,13 +105,16 @@ function editProduct(){
     document.querySelector('#type').value = product[index].TYPE
     document.querySelector('#currency').value = product[index].CURRENCY
 
-    button_edit.addEventListener('click', function(){
+    button_edit.addEventListener('click', function () {
         onEdit(index)
+        index = null
     })
 }
+
 function onCancel() {
     hide(add_product_form)
 }
+
 function onEdit(index) {
     let new_product = {}
     let name = document.querySelector('#name').value;
@@ -112,27 +123,41 @@ function onEdit(index) {
     let description = document.querySelector('#description').value;
     let price = document.querySelector('#price').value;
     let currency = document.querySelector('#currency').value;
-    
+
     new_product.NAME = name
     new_product.DESCRIPTION = description
     new_product.PRICE = price
     new_product.SIZE = size
     new_product.TYPE = type
     new_product.CURRENCY = currency
-    product.push(new_product[index])
+    product[index] = (new_product)
+    saveProduct()
+    renderProduct()
     hide(add_product_form)
 }
+
 function onSave() {
     hide(shipping_option)
 }
+
 function onAddProduct() {
     show(add_product_form)
     button_edit.style.display = 'none'
     button_create.style.display = 'block'
+}
+function onAddToCart(event) {
+    let index = event.target.id
+    list_product_in_cart.push(product[index])
+}
+function removeProductInCart() {
 
 
 }
+
+
+
 function renderProduct() {
+    loadProduct()
     // Remove the table 
     let table_list = document.querySelector("#table-list-product");
     table_list.remove();
@@ -228,7 +253,6 @@ function renderProduct() {
 
 
 // Main------------------------------------------------------------------------------
-loadProduct()
 renderProduct()
 hide(shipping_option)
 shipping.addEventListener("click", shippingOption);
@@ -238,3 +262,6 @@ button_add_product.addEventListener('click', onAddProduct)
 button_create.addEventListener('click', onCreate)
 button_save.addEventListener('click', onSave)
 button_cancel.addEventListener('click', onCancel)
+button_detial.addEventListener('click', showDetial)
+button_add_to_cart.addEventListener('click', onAddToCart)
+

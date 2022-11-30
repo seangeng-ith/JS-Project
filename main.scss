@@ -289,7 +289,7 @@ header {
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
 
-    div {
+    .contain-product-list {
         width: 90%;
         display: flex;
         justify-content: center;
@@ -297,7 +297,7 @@ header {
         margin-top: 10%;
 
         h1 {
-            margin-left: 40%;
+            margin-left: 35%;
         }
 
         .add-product {
@@ -339,9 +339,11 @@ header {
         margin: 0;
         padding: 0;
         color: rgba(0, 0, 0, 0.63);
-        button:hover{
+
+        button:hover {
             background-color: orange;
         }
+
         header {
             background-color: darkblue;
             padding-top: 20px;
@@ -396,6 +398,10 @@ table {
     border-collapse: collapse;
     text-align: center;
 
+    img {
+        width: 90px;
+    }
+
     thead {
         background-color: darkblue;
         color: white;
@@ -446,6 +452,110 @@ table {
                 }
             }
 
+        }
+    }
+}
+
+.container-shopping-cart {
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+
+    .shopping-cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        border-radius: 10px;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+        .header-shopping-cart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+
+            h1 {
+                font-size: 2.5vw;
+                margin-left: 35%;
+            }
+
+            p {
+                font-size: 1vw;
+                margin-left: 35%;
+            }
+        }
+
+        table {
+            tr {
+                td:nth-child(2) {
+                    border-left: 1px solid black;
+                }
+
+                td {
+                    border: none;
+
+                    button {
+                        border: 1px solid black;
+                        background-color: #FF4141;
+                        color: white;
+                        padding: 10px;
+                        border-radius: 10px;
+                        box-shadow: rgba(212, 43, 43, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+                    }
+                }
+            }
+        }
+
+        .product-name-detials {
+            display: flex;
+            text-align: left;
+            padding: 10px;
+
+            div {
+                margin: 5px;
+            }
+
+            h4 {
+                margin: 25px 0px 4px 0px;
+            }
+
+            p {
+                margin: 0px 0px 10px 0px;
+                font-size: small;
+            }
+
+        }
+
+        .total-price {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 90%;
+            margin: 10px;
+
+            p {
+                margin: 2px;
+            }
+        }
+
+        .footer-shopping-cart {
+            display: flex;
+            justify-content: flex-end;
+            width: 90%;
+            padding-bottom: 20px;
+            button {
+                width: 130px;
+                padding: 10px;
+                border-radius: 10px;
+                border: none;
+                background-color: rgb(38, 155, 209);
+                color: white;
+                margin-left: 10px;
+                box-shadow: rgba(212, 43, 43, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+            }
         }
     }
 }
