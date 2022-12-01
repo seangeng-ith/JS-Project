@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initail-scale=1.0">
     <title>Shopping Mall</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="Pages/SellerPages.html">
-    <script src="JS/index.js" defer type="module"></script>
+    <script src="JS/script.js" defer type="module"></script>
 </head>
 
 <body>
@@ -56,10 +56,10 @@
                     </div>
                 </div>
             </div>
-            <div class="cart" >
+            <div class="cart">
                 <a href="Pages/cartPage.html"><i class="material-icons">local_grocery_store</i></a>
                 <div>
-                    <p>00</p>
+                    <p id='product-in-cart'></p>
                 </div>
             </div>
             <div class="account">
@@ -108,162 +108,55 @@
 
     </div>
     <div class="container">
-        <div class="contain-detial" style="display: none;">
-            <div class="detial-image">
-                <img src="Images/hoodie.jpg" alt="">
-            </div>
-            <div class="detial-product">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe praesentium ut sapiente placeat qui esse quos eius, perspiciatis laboriosam aspernatur necessitatibus quisquam eligendi explicabo veritatis. Optio consectetur eos laboriosam. Eius!</p>
-                <div>
-                    <i class="material-icons">star</i>
-                    <i class="material-icons">star</i>
-                    <i class="material-icons">star</i>
-                    <i class="material-icons">star</i>
-                    <i class="material-icons">star</i>
-                    <p>4.5</p>
+        <div class="contain-detail" style="display: none;">
+            <div class="boxing-details">
+                <div class="detail-image">
+                    <img src="Images/hoodie.jpg" alt="">
                 </div>
-                <h2>USD $ 19</h2>
-                <div>
-                    <p>Quantity</p>
+                <div class="detail-product">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe praesentium ut sapiente placeat qui
+                        esse quos eius, perspiciatis laboriosam aspernatur necessitatibus quisquam eligendi explicabo
+                        veritatis. Optio consectetur eos laboriosam. Eius!
+                    </p>
                     <div>
-                        <button class="disincrease">-</button>
-                        <p>0</p>
-                        <button class="increase">+</button>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <p class="averrage">4.5</p>
                     </div>
+                    <h2>USD $ 19</h2>
+                    <h4>Type : <span></span></h4>
+                    <h4>Size : <span></span></h4>
+                    <h4>Brand : <span></span></h4>
+                    <div class="quantity-box">
+                        <h4>Quantity :</h4>
+                        <div>
+                            <button class="disincrease">-</button>
+                            <p>0</p>
+                            <button class="increase">+</button>
+                        </div>
+                    </div>
+                    <button class="btn-buy">Buy Now</button>
+                    <button class="add-cart">Add to Cart</button>
                 </div>
-                <button class="btn-detial">Buy Now</button>
-                <button class="add-cart">Add to Cart</button>
+                <img src="Images/exit.png" alt="" id="exit">
             </div>
         </div>
+        
         <div class="card">
             <div id="sub-card">
                 <img src="images/air-jordan.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <p><span>$ 250</span></p>
                 <div class="star">
-                    <a href="Pages/cartPage.html"><i class="material-icons">star</i></a>
-                    <p>4.5</p>
-                </div>
-                <div class="sub-card-button">
-                    <button id="add-cart">Add to Cart</button>
-                    <button id="btn-detial">Detial</button>
-                </div>
-            </div>
-            <div id="sub-card">
-                <img src="images/air-jordan.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p><span>$ 250</span></p>
-                <div class="star">
                     <i class="material-icons">star</i>
                     <p>4.5</p>
                 </div>
                 <div class="sub-card-button">
                     <button id="add-cart">Add to Cart</button>
-                    <button id="btn-detial">Detial</button>
-                </div>
-            </div>
-            <div id="sub-card">
-                <img src="images/cargo-pants.jfif" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p><span>$ 250</span></p>
-                <div class="star">
-                    <i class="material-icons">star</i>
-                    <p>4.5</p>
-                </div>
-                <div class="sub-card-button">
-                    <button id="add-cart">Add to Cart</button>
-                    <button id="btn-detial">Detial</button>
-                </div>
-            </div>
-            <div id="sub-card">
-                <img src="images/hoodie.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p><span>$ 250</span></p>
-                <div class="star">
-                    <i class="material-icons">star</i>
-                    <p>4.5</p>
-                </div>
-                <div class="sub-card-button">
-                    <button id="add-cart">Add to Cart</button>
-                    <button id="btn-detial">Detial</button>
-                </div>
-            </div>
-            <div id="sub-card">
-                <img src="images/hoodie.jfif" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p><span>$ 250</span></p>
-                <div class="star">
-                    <i class="material-icons">star</i>
-                    <p>4.5</p>
-                </div>
-                <div class="sub-card-button">
-                    <button id="add-cart">Add to Cart</button>
-                    <button id="btn-detial">Detial</button>
-                </div>
-            </div>
-            <div id="sub-card">
-                <img src="images/men-pants.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p><span>$ 250</span></p>
-                <div class="star">
-                    <i class="material-icons">star</i>
-                    <p>4.5</p>
-                </div>
-                <div class="sub-card-button">
-                    <button id="add-cart">Add to Cart</button>
-                    <button id="btn-detial">Detial</button>
-                </div>
-            </div>
-            <div id="sub-card">
-                <img src="images/air-jordan.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p><span>$ 250</span></p>
-                <div class="star">
-                    <i class="material-icons">star</i>
-                    <p>4.5</p>
-                </div>
-                <div class="sub-card-button">
-                    <button id="add-cart">Add to Cart</button>
-                    <button id="btn-detial">Detial</button>
-                </div>
-            </div>
-            <div id="sub-card">
-                <img src="images/jacket.jpeg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p><span>$ 250</span></p>
-                <div class="star">
-                    <i class="material-icons">star</i>
-                    <p>4.5</p>
-                </div>
-                <div class="sub-card-button">
-                    <button id="add-cart">Add to Cart</button>
-                    <button id="btn-detial">Detial</button>
-                </div>
-            </div>
-            <div id="sub-card">
-                <img src="images/hoodie.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p><span>$ 250</span></p>
-                <div class="star">
-                    <i class="material-icons">star</i>
-                    <p>4.5</p>
-                </div>
-                <div class="sub-card-button">
-                    <button id="add-cart">Add to Cart</button>
-                    <button id="btn-detial">Detial</button>
-                </div>
-            </div>
-            <div id="sub-card">
-                <img src="images/hoodie.jfif" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p><span>$ 250</span></p>
-                <div class="star">
-                    <i class="material-icons">star</i>
-                    <p>4.5</p>
-                </div>
-                <div class="sub-card-button">
-                    <button id="add-cart">Add to Cart</button>
-                    <button id="btn-detial">Detial</button>
+                    <button id="btn-detail">Detail</button>
                 </div>
             </div>
         </div>

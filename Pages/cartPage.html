@@ -58,7 +58,7 @@
             <div class="cart">
                 <i class="material-icons">local_grocery_store</i>
                 <div>
-                    <p>00</p>
+                    <p id='product-in-cart'></p>
                 </div>
             </div>
             <div class="account">
@@ -76,40 +76,27 @@
     <div class="container-shopping-cart">
         <div class="shopping-cart">
             <div class="header-shopping-cart">
-                <h1>Shopping Cart</h1>
-                <p>1 item</p>
+                <h1 class="shopping-header-title">Shopping Cart</h1>
+                <p class="item"></p>
             </div>
-            <table>
-                <thead>
-                    <td>Product Name & Detials</td>
-                    <td>Price</td>
-                    <td>Quantity</td>
-                    <td>Total</td>
-                    <td></td>
-                </thead>
-                <tr>
-                    <td>
-                        <div class="product-name-detials">
-                            <img src="../Images/hoodie.jpg" alt="" id="shopping-cart-product-image">
-                            <div>
-                                <h4>Hoodie</h4>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, tempora!</p>
-                                <p>size</p>
-                            </div>
-                        </div>
-                    </td>
-                    <td>$12</td>
-                    <td>2</td>
-                    <td>$123</td>
-                    <td><button>Remove</button></td>
-                </tr>
-            </table>
+            <div class="contain-table">
+                <table>
+                    <thead>
+                        <td>Product Name & Details</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Total</td>
+                        <td></td>
+                    </thead>
+
+                </table>
+            </div>
             <div class="total-price">
-                <p>Total price:</p>
-                <p><span>$1234</span></p>
+                <p class="text-total">Total price:</p>
+                <span class="span"></span>
             </div>
             <div class="footer-shopping-cart">
-                <button class="back">Back to shopping</button>
+                <a href="../index.html"><button class="back">Back to shopping</button></a>
                 <button class="Checkout">Checkout</button>
             </div>
         </div>

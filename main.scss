@@ -229,12 +229,14 @@ header {
     // height: 50vh;
     .card {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         min-height: 10rem;
+        width: 100%;
 
         #sub-card {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             border-radius: 10px;
             margin: 10px;
             box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -246,9 +248,9 @@ header {
                 color: rgb(235, 112, 4);
             }
 
-            p,
+            p,h4,
             i {
-                margin: 5px;
+                margin: 2px 0px 2px 10px;
             }
 
             img {
@@ -313,7 +315,108 @@ header {
 
 }
 
-//Seller pages----------------------------------
+.contain-detail {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.877);
+    z-index: 99;
+
+    .boxing-details {
+        position: fixed;
+        top: 15vh;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        z-index: 100;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        color: rgba(0, 0, 0, 0.63);
+
+        #exit {
+            width: 30px;
+            position: fixed;
+            top: 12%;
+            right: 8%;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
+
+        .detail-image {
+            margin: 20px;
+        }
+
+        .quantity-box {
+            div {
+                display: flex;
+                justify-content: center;
+                justify-content: space-between;
+                align-items: center;
+                margin: 2px;
+                width: 20%;
+
+                button {
+                    padding: 2px;
+                    width: 40px;
+                    font-size: larger;
+                    border: none;
+                    margin: 0px;
+                    border-radius: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+                }
+
+                p {
+                    margin: 0;
+                }
+
+            }
+
+            h4 {
+                font-weight: 100px;
+            }
+
+
+        }
+
+        button {
+            padding: 20px;
+            width: 200px;
+            border: none;
+            border-radius: 10px;
+            background-color: orange;
+            margin-top: 5%;
+            margin-right: 20px;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
+
+        button:hover {
+            background-color: #41BBFF;
+        }
+
+        p {
+            margin-bottom: 5%;
+            font-weight: bold;
+        }
+
+        i {
+            color: orange;
+        }
+
+        .averrage,
+        h2 {
+            color: red;
+        }
+    }
+
+}
 
 // Form input product-----------------------------
 #add-product-dialog {
@@ -360,11 +463,11 @@ header {
             padding: 20px;
 
             input {
-                padding: 10px;
+                padding: 5px;
             }
 
             select {
-                padding: 10px;
+                padding: 5px;
                 width: 200px;
             }
         }
@@ -420,7 +523,7 @@ table {
 
         td:nth-child(2) {
             img {
-                width: 150px;
+                width: 0px;
             }
         }
 
@@ -477,38 +580,47 @@ table {
 
             h1 {
                 font-size: 2.5vw;
-                margin-left: 35%;
+                margin-left: 30%;
             }
 
             p {
                 font-size: 1vw;
-                margin-left: 35%;
+                font-weight: bold;
+                margin-left: 20%;
             }
         }
 
-        table {
-            tr {
-                td:nth-child(2) {
-                    border-left: 1px solid black;
-                }
+        .contain-table {
+            display: flex;
+            justify-content: center;
+            width: 100%;
 
-                td {
-                    border: none;
+            table {
+                tr {
+                    td:nth-child(2) {
+                        border-left: 1px solid black;
+                    }
 
-                    button {
-                        border: 1px solid black;
-                        background-color: #FF4141;
-                        color: white;
-                        padding: 10px;
-                        border-radius: 10px;
-                        box-shadow: rgba(212, 43, 43, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+                    td {
+                        border: none;
+                        border-bottom: 1px solid black;
 
+                        button {
+                            border: 1px solid black;
+                            background-color: #FF4141;
+                            color: white;
+                            padding: 15px;
+                            border-radius: 10px;
+                            box-shadow: rgba(212, 43, 43, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+                        }
                     }
                 }
             }
         }
 
-        .product-name-detials {
+
+        .product-name-details {
             display: flex;
             text-align: left;
             padding: 10px;
@@ -524,6 +636,9 @@ table {
             p {
                 margin: 0px 0px 10px 0px;
                 font-size: small;
+            }
+            img{
+                width: 150px;
             }
 
         }
@@ -545,9 +660,10 @@ table {
             justify-content: flex-end;
             width: 90%;
             padding-bottom: 20px;
+
             button {
-                width: 130px;
-                padding: 10px;
+                width: 150px;
+                padding: 15px;
                 border-radius: 10px;
                 border: none;
                 background-color: rgb(38, 155, 209);
