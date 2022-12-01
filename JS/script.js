@@ -165,7 +165,6 @@ function displayProduct() {
         let name = document.createElement('h4')
         let description = document.createElement('p')
         let price = document.createElement('p')
-        let span = document.createElement('span')
         let contain_star = document.createElement('div')
         contain_star.className = 'star'
 
@@ -186,10 +185,14 @@ function displayProduct() {
         button_detail.addEventListener('click', onDetail)
 
         // Add text in Element
+        let text = ''
+        if (product[index].DESCRIPTION.length>58){
+            text = '...'
+        }
         image_product.src = product[index].IMAGE
         name.textContent = product[index].NAME
-        description.textContent = product[index].DESCRIPTION
-        span = product[index].PRICE
+        description.textContent = product[index].DESCRIPTION.substring(0,58)+ text
+        price.textContent = "$" +product[index].PRICE
         averrage.textContent = 4.5
         button_add_to_cart.textContent = 'Add to card'
         button_detail.textContent = 'Detail'
@@ -221,10 +224,29 @@ function onAddToCart(event) {
     loadProduct()
     CountProductInCart()
 }
-function onDetail() {
+function onDetail(event) {
+    let index = event.target.id
     show(detail)
+    let description = document.querySelector('.description-detail').textContent = product[index].DESCRIPTION;
+    let price = document.querySelector('.detail-price').textContent = 'USD $' + product[index].PRICE;
+    let img = document.createElement('img')
+    img.id = "detail-image-product"
+    img.src = product[index].IMAGE
+    let div = document.querySelector('.detail-image')
+    div.appendChild(img)
+    let type = document.querySelector('.detail-type').textContent =  'Type : '+ product[index].TYPE;
+    let size = document.querySelector('.detail-size').textContent = 'Size :' +product[index].SIZE;
+    let brand = document.querySelector('.detail-brand').textContent = 'Brand :'+ product[index].BRAND;
+    
+    let count = product[index].QUANTITY
+    if ( product[index].QUANTITY === null ){
+        count = 0
+    }
+    let quantity = document.querySelector('.detail-quantity').textContent = 0
+
     button_exit.addEventListener('click',function(){
         hide(detail)
+        img.remove()
     })
 }
 
@@ -321,7 +343,7 @@ function DisplayShoppingCart() {
         size.textContent = 'size' + new_array[index].SIZE
 
         let price = document.createElement('td')
-        price.textContent = new_array[index].PRICE
+        price.textContent = "$" +new_array[index].PRICE
 
         let Quantity = document.createElement('td')
         Quantity.textContent = new_array[index].QUANTITY
@@ -383,7 +405,7 @@ function onCancel() {
     hide(add_product_form)
 }
 // Edit the product that you select----------------------------
-function editProduct() {
+function editProduct(event) {
     show(add_product_form)
     button_create.style.display = 'none';
     button_edit.style.display = 'block';
@@ -506,8 +528,14 @@ function renderProduct() {
         type_td.textContent = product[index].TYPE
         name_td.textContent = product[index].NAME
         brand_td.textContent = product[index].BRAND
-        description_td.textContent = product[index].DESCRIPTION
-        price_td.textContent = product[index].PRICE
+        
+        let word = product[index].DESCRIPTION
+        if (word.length>100){
+            word = product[index].DESCRIPTION.substring(0,100)+ '...'
+            
+        }
+        description_td.textContent = word
+        price_td.textContent = "$" + product[index].PRICE
         delete_button.textContent = 'Delete'
         edit_button.textContent = 'Edit'
 

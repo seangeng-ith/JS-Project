@@ -307,7 +307,22 @@ header img {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 .contain-detail .boxing-details .detail-image {
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.contain-detail .boxing-details .detail-image img {
+  width: 400px;
+  margin-left: 20px;
+}
+.contain-detail .boxing-details .detail-product {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contain-detail .boxing-details .detail-product p, .contain-detail .boxing-details .detail-product div, .contain-detail .boxing-details .detail-product h4 {
+  margin: 6px;
 }
 .contain-detail .boxing-details .quantity-box div {
   display: flex;
@@ -315,7 +330,7 @@ header img {
   justify-content: space-between;
   align-items: center;
   margin: 2px;
-  width: 20%;
+  width: 150px;
 }
 .contain-detail .boxing-details .quantity-box div button {
   padding: 2px;
@@ -326,8 +341,8 @@ header img {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
-.contain-detail .boxing-details .quantity-box div p {
-  margin: 0;
+.contain-detail .boxing-details .quantity-box div .detail-quantity {
+  margin: 0px;
 }
 .contain-detail .boxing-details .quantity-box h4 {
   font-weight: 100px;
@@ -442,8 +457,8 @@ table thead td {
 table tr td {
   border: 1px solid black;
 }
-table tr td:nth-child(2) img {
-  width: 0px;
+table tr td:nth-child(1) img {
+  width: 150px;
 }
 table tr td:last-child div {
   margin-bottom: 10%;
