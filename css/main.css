@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 100vh;
+  background-color: lightgray;
 }
 
 nav {
@@ -157,6 +158,7 @@ header img {
   margin: 10px;
   padding: 10px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-color: white;
 }
 .popular-brand .brand {
   display: flex;
@@ -194,6 +196,7 @@ header img {
 }
 .container .card #sub-card,
 .container-seller .card #sub-card {
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -209,7 +212,8 @@ header img {
 .container-seller .card #sub-card i {
   color: rgb(235, 112, 4);
 }
-.container .card #sub-card p, .container .card #sub-card h4,
+.container .card #sub-card p,
+.container .card #sub-card h4,
 .container .card #sub-card i,
 .container-seller .card #sub-card p,
 .container-seller .card #sub-card h4,
@@ -324,7 +328,9 @@ header img {
   flex-direction: column;
   width: 100%;
 }
-.contain-detail .boxing-details .detail-product p, .contain-detail .boxing-details .detail-product div, .contain-detail .boxing-details .detail-product h4 {
+.contain-detail .boxing-details .detail-product p,
+.contain-detail .boxing-details .detail-product div,
+.contain-detail .boxing-details .detail-product h4 {
   margin: 6px;
 }
 .contain-detail .boxing-details .quantity-box div {
@@ -444,6 +450,7 @@ table {
   width: 90%;
   border-collapse: collapse;
   text-align: center;
+  background-color: white;
 }
 table img {
   width: 90px;
@@ -501,6 +508,7 @@ table tr td:last-child div .edit {
   width: 90%;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
 }
 .container-shopping-cart .shopping-cart .header-shopping-cart {
   display: flex;
@@ -604,13 +612,50 @@ footer div img {
 
 .buy-container {
   display: flex;
+  position: absolute;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 7%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: white;
 }
 .buy-container .container-left {
   flex: 2;
-  background-color: #41BBFF;
+}
+.buy-container .container-left .box {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  margin: 5px;
+}
+.buy-container .container-left .box h5 {
+  color: rgb(108, 108, 255);
+}
+.buy-container .container-left .box h5:hover {
+  color: orange;
 }
 .buy-container .container-right {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid lightgray;
+  padding: 10px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin: 5px;
+}
+.buy-container .container-right div {
+  display: flex;
+  justify-content: space-between;
+}
+.buy-container .container-right button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(212, 43, 43, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   background-color: orange;
 }
 .buy-container img {
