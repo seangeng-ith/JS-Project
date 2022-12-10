@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller</title>
+    <title>Buy Pages</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.min.css">
-    <script src="../JS/script.js" defer type="module"></script>
+    <script src="../JS/script.js" defer></script>
 </head>
 
 <body>
     <nav>
         <div class="nav-left">
-            <a href="../index.html"><img src="../Images/shopping-mall-logo.png" alt=""></a>
+            <a href="index.html"><img src="../Images/shopping-mall-logo.png" alt=""></a>
         </div>
         <div class="nav-center">
             <select name="categories" id="categories">
@@ -34,7 +34,7 @@
         <div class="nav-right">
             <div class="shipping">
                 <div class="currency-show">
-                    <img src="../images/cambodia.png" alt="" id="country">
+                    <img src="images/cambodia.png" alt="" id="country">
                     <p>/</p>
                     <p id="currency">USD</p>
                 </div>
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="cart">
-                <a href="../Pages/cartPage.html"><i class="material-icons">local_grocery_store</i></a>
+                <a href="Pages/cartPage.html"><i class="material-icons">local_grocery_store</i></a>
                 <div>
                     <p id='product-in-cart'></p>
                 </div>
@@ -67,53 +67,44 @@
                     <p>Account</p>
                 </div>
                 <div class="user-account-main">
-                    <a href="../index.html"><button>Customer</button></a>
-                    <a href="SellerPages.html"><button>Seller</button></a>
+                    <a href="index.html"><button>Customer</button></a>
+                    <a href="Pages/SellerPages.html"><button>Seller</button></a>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="container-seller">
-        <div id="add-product-dialog" style="display: none;">
-            <dialog open>
-                <header>Create new product</header>
-                <section>
-                    <label>Name</label>
-                    <input id="name" type="text" placeholder="Name of the prodcut" required >
-
-                    <label>Description</label>
-                    <input id="description" type="text" placeholder="Write your description" />
-                    <label>Price</label>
-                    <input id="price" type="number" placeholder="Input price"  required>
-                    <label for="">Size</label>
-                    <input type="text" name="" id="size" placeholder="Input size" required>
-                    <label for="">Type</label>
-                    <input type="text" id="type" placeholder="Input the Type">
-                    <label for="">Currency</label>
-                    <select id="currency">
-                        <option value="USD">USD (US Dollar)</option>
-                        <option value="KHR">KHR (KH Riel)</option>
-                    </select>
-                    <label for="">Image</label>
-                    <input type="text" id="url-image" placeholder="Input URL image">
-                </section>
-
-                <menu>
-
-                    <button id="cancel">Cancel</button>
-
-                    <button id="edit" type="submit">Edit</button>
-
-                    <button id="create" type="sumbit">Create</button>
-
-                </menu>
-            </dialog>
+    <div class="buy-container">
+        <div class="container-left">
+            <div class="addressing">
+                <h2>Shipping Address</h2>
+                <h3>+ Add New Address</h3>
+            </div>
+            <div class="payment">
+                <h2>Payment Methods</h2>
+                <h3>Select Payment Method</h3>
+            </div>
         </div>
-        <div class="contain-product-list">
-            <h1>PRODUCT LIST</h1>
-            <button class="add-product">Add Product</button>
+        <div class="card">
+            <img src="../Images/hoodie.jfif" alt="">
+            <div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, placeat.</p>
+                <p>US $5.4</p>
+            </div>
         </div>
-        <table id="table-list-product"></table>
+        <div class="container-right"></div>
+        <div class="container-right">
+            <h2>Summary</h2>
+            <div>
+                <h4>Total item costs</h4>
+                <h4>US $11.96</h4>
+            </div>
+            <br>
+            <div>
+                <h4>Total</h4>
+                <h4>US $14.10</h4>
+            </div>
+            <button>Place order</button>
+        </div>
     </div>
 </body>
 

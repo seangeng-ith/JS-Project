@@ -1,5 +1,5 @@
 //----------------------------------------------------
-//
+//CONSTANTS VARIABLE
 //----------------------------------------------------
 const shipping = document.querySelector('.currency-show');
 const shipping_option = document.querySelector('.shipping-option');
@@ -15,6 +15,8 @@ const button_cancel = document.querySelector("#cancel");
 const button_add_product = document.querySelector('.add-product')
 const button_exit = document.querySelector('#exit')
 const button_buy = document.querySelector('.btn-buy')
+const button_increase = document.querySelector('.increase')
+const button_decrease = document.querySelector('.decrease')
 
 // Data------------------------------------------
 let product = [
@@ -28,7 +30,7 @@ let product = [
         TYPE: 'shoes',
         CURRENCY: 'USD',
         IMAGE: "https://d1flfk77wl2xk4.cloudfront.net/Assets/87/496/XXL_p0130849687.jpg",
-        QUANTITY: 2
+        QUANTITY: 0
     },
     {
         ID: 1,
@@ -40,8 +42,8 @@ let product = [
         TYPE: 'shoes',
         CURRENCY: 'USD',
         IMAGE: "https://d1flfk77wl2xk4.cloudfront.net/Assets/87/496/XXL_p0130849687.jpg",
-        QUANTITY: 2
-
+        QUANTITY: 0
+        
 
     },
     {
@@ -54,7 +56,7 @@ let product = [
         TYPE: 'shoes',
         CURRENCY: 'USD',
         IMAGE: "https://m.media-amazon.com/images/I/71D9ImsvEtL._UY625_.jpg",
-        QUANTITY: 2
+        QUANTITY: 0
     },
     {
         ID: 1,
@@ -65,7 +67,8 @@ let product = [
         SIZE: 7,
         TYPE: 'shoes',
         CURRENCY: 'USD',
-        IMAGE: "https://m.media-amazon.com/images/I/71D9ImsvEtL._UY625_.jpg"
+        IMAGE: "https://m.media-amazon.com/images/I/71D9ImsvEtL._UY625_.jpg",
+        QUANTITY: 0
 
     },
     {
@@ -77,7 +80,8 @@ let product = [
         SIZE: 7,
         TYPE: 'shoes',
         CURRENCY: 'USD',
-        IMAGE: "https://m.media-amazon.com/images/I/71D9ImsvEtL._UY625_.jpg"
+        IMAGE: "https://m.media-amazon.com/images/I/71D9ImsvEtL._UY625_.jpg",
+        QUANTITY: 0
 
     },
     {
@@ -88,7 +92,8 @@ let product = [
         SIZE: 7,
         TYPE: 'shoes',
         CURRENCY: 'USD',
-        IMAGE: "https://m.media-amazon.com/images/I/71D9ImsvEtL._UY625_.jpg"
+        IMAGE: "https://m.media-amazon.com/images/I/71D9ImsvEtL._UY625_.jpg",
+        QUANTITY: 0
 
     }
 
@@ -96,7 +101,7 @@ let product = [
 
 let new_array = [];
 
-
+let quantity_product = 0
 // LOCAL STORAGE---------------------------------
 function saveProduct() {
     localStorage.setItem("product", JSON.stringify(product));
@@ -114,6 +119,7 @@ function loadProduct() {
     }
 }
 
+
 // Create product ----------------------------------------
 function onCreate() {
     let new_product = {}
@@ -124,6 +130,7 @@ function onCreate() {
     new_product.PRICE = document.getElementById('price').value;
     new_product.CURRENCY = document.getElementById('currency').value;
     new_product.IMAGE = document.getElementById('url-image').value;
+    new_product.QUANTITY = quantity_product
     product.push(new_product)
     saveProduct()
     renderProduct()
@@ -146,6 +153,7 @@ function shippingOption() {
         shipping.style.removeProperty("color");
     })
 }
+
 
 // Display product for customer----------------------------------
 
@@ -227,6 +235,8 @@ function onAddToCart(event) {
 function onDetail(event) {
     let index = event.target.id
     show(detail)
+    let button_addcart = document.querySelector('.add-cart')
+    button_addcart.id = index
     let description = document.querySelector('.description-detail').textContent = product[index].DESCRIPTION;
     let price = document.querySelector('.detail-price').textContent = 'USD $' + product[index].PRICE;
     let img = document.createElement('img')
@@ -238,16 +248,28 @@ function onDetail(event) {
     let size = document.querySelector('.detail-size').textContent = 'Size :' +product[index].SIZE;
     let brand = document.querySelector('.detail-brand').textContent = 'Brand :'+ product[index].BRAND;
     
-    let count = product[index].QUANTITY
-    if ( product[index].QUANTITY === null ){
-        count = 0
-    }
-    let quantity = document.querySelector('.detail-quantity').textContent = 0
+   
+    button_decrease.addEventListener('click',function(){
+        quantity_product = onDecrease()
+        let quantity = document.querySelector('.detail-quantity').textContent = quantity_product
+        product[index].QUANTITY = quantity_product
+    })
+    button_increase.addEventListener('click',function(){
+        quantity_product = onIncrease()
+        let quantity = document.querySelector('.detail-quantity').textContent = quantity_product 
+        product[index].QUANTITY = quantity_product
+    })
+
+    button_addcart.addEventListener('click',onAddToCart)
 
     button_exit.addEventListener('click',function(){
         hide(detail)
         img.remove()
+        quantity_product = 0
+        product[index].QUANTITY = quantity_product
+        saveProduct()
     })
+    console.log(document.querySelector('.detail-product'))
 }
 
 function onRemove(event) {
@@ -257,6 +279,20 @@ function onRemove(event) {
     saveProduct();
     DisplayShoppingCart();
     CountProductInCart()
+}
+
+function onIncrease(){
+    quantity_product+=1
+    console.log(quantity_product)
+    return quantity_product
+}
+
+function onDecrease(){
+    if (quantity_product != 0){
+        quantity_product-=1
+    }
+    console.log(quantity_product)
+    return quantity_product
 }
 
 function CountProductInCart() {
@@ -340,7 +376,7 @@ function DisplayShoppingCart() {
         brand.textContent = 'Brand :'+new_array[index].BRAND
 
         let size = document.createElement('p')
-        size.textContent = 'size' + new_array[index].SIZE
+        size.textContent = 'size :' + new_array[index].SIZE
 
         let price = document.createElement('td')
         price.textContent = "$" +new_array[index].PRICE
@@ -349,7 +385,7 @@ function DisplayShoppingCart() {
         Quantity.textContent = new_array[index].QUANTITY
 
         let total_one_product = document.createElement('td')
-        total_one_product.textContent = new_array[index].PRICE
+        total_one_product.textContent = '$'+new_array[index].PRICE* new_array[index].QUANTITY
 
         let btn = document.createElement('td')
         let btn_remove = document.createElement('button')
@@ -358,7 +394,7 @@ function DisplayShoppingCart() {
         btn_remove.addEventListener('click', onRemove)
         btn.appendChild(btn_remove)
 
-        all_product_price += new_array[index].PRICE * new_array[index].QUANTITY
+        all_product_price +=new_array[index].PRICE * new_array[index].QUANTITY
         product_name_details.appendChild(product_img)
         product_name_details.appendChild(div)
         div.appendChild(name)
@@ -382,7 +418,7 @@ function DisplayShoppingCart() {
     span = document.createElement('span')
     span.className = 'span'
 
-    span.textContent = all_product_price
+    span.textContent = '$ '+all_product_price
 
     text_total.appendChild(span)
 }
@@ -416,6 +452,7 @@ function editProduct(event) {
     document.querySelector('#size').value = product[index].SIZE
     document.querySelector('#type').value = product[index].TYPE
     document.querySelector('#currency').value = product[index].CURRENCY
+    document.querySelector('#url-image').value = product[index].IMAGE
 
     button_edit.addEventListener('click', function () {
         onEdit(index)
@@ -442,6 +479,7 @@ function onEdit(index) {
     new_product.TYPE = type
     new_product.CURRENCY = currency
     new_product.IMAGE = img
+    new_product.QUANTITY = quantity_product
     product[index] = (new_product)
     saveProduct()
     renderProduct()
@@ -463,7 +501,6 @@ function onAddProduct() {
     button_edit.style.display = 'none'
     button_create.style.display = 'block'
 }
-
 
 function renderProduct() {
     loadProduct()

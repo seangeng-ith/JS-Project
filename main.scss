@@ -199,20 +199,21 @@ header {
         display: flex;
 
         #sub-brand {
-
             display: flex;
             flex-direction: column;
             align-items: center;
-
+            width: 30%;
+            height: 50%;
             img {
                 width: 75%;
+                padding: 5px;
                 border-radius: 50%;
                 box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
                 transition: transform .3s;
             }
 
             img:hover {
-                transform: scale(1.06);
+                transform: scale(1.20);
             }
         }
     }
@@ -226,7 +227,6 @@ header {
     flex-direction: column;
     align-items: center;
 
-    // height: 50vh;
     .card {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -255,7 +255,7 @@ header {
 
             img {
                 width: 100%;
-                height: 220px;
+                height: 200px;
                 border-radius: 10px 10px 0px 0px;
             }
 
@@ -265,7 +265,7 @@ header {
             }
 
             .sub-card-button {
-                margin: 10px;
+                margin: 5px;
                 display: flex;
                 justify-content: space-between;
 
@@ -514,13 +514,12 @@ table {
     width: 90%;
     border-collapse: collapse;
     text-align: center;
-
     img {
         width: 90px;
     }
 
     thead {
-        background-color: darkblue;
+        background-color: rgb(24, 24, 66);
         color: white;
         font-size: larger;
 
@@ -540,17 +539,21 @@ table {
                 width: 150px;
             }
         }
+        td:nth-child(7) {
+            width: 100px;
+        }
 
         td:last-child {
             div {
                 margin-bottom: 10%;
+                padding: 10px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
 
                 button {
-                    width: 80%;
+                    width: 150px;
                     padding: 10px;
                     margin-top: 10px;
                     border: none;
@@ -560,12 +563,10 @@ table {
 
                 .delete {
                     background-color: #FF4141;
-                    color: white;
                 }
 
                 .edit {
-                    background-color: #41BBFF;
-                    color: white;
+                    background-color:orange;
                 }
             }
 
@@ -584,7 +585,7 @@ table {
         align-items: center;
         width: 90%;
         border-radius: 10px;
-        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
         .header-shopping-cart {
             display: flex;
@@ -614,11 +615,11 @@ table {
                     td:nth-child(2) {
                         border-left: 1px solid black;
                     }
-
+                    
                     td {
                         border: none;
                         border-bottom: 1px solid black;
-
+                        padding: 10px;
                         button {
                             border: 1px solid black;
                             background-color: #FF4141;
@@ -687,5 +688,38 @@ table {
 
             }
         }
+    }
+}
+footer{
+    margin-top: 5%;
+    background-color: rgb(24, 24, 66);
+    color: white;
+    div{
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid black;
+        h3{
+            margin: 2%;
+        }
+        img{
+            width: 30px;
+            margin: 2%;
+            border-radius: 50%;
+        }
+    }
+
+}
+.buy-container{
+    display: flex;
+    .container-left{
+        flex: 2;
+        background-color: #41BBFF;
+    }
+    .container-right{
+        flex: 1;
+        background-color: orange;
+    }
+    img{
+        width: 20%;
     }
 }

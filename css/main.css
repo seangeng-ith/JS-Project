@@ -165,15 +165,18 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 30%;
+  height: 50%;
 }
 .popular-brand .brand #sub-brand img {
   width: 75%;
+  padding: 5px;
   border-radius: 50%;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   transition: transform 0.3s;
 }
 .popular-brand .brand #sub-brand img:hover {
-  transform: scale(1.06);
+  transform: scale(1.2);
 }
 
 .container,
@@ -216,7 +219,7 @@ header img {
 .container .card #sub-card img,
 .container-seller .card #sub-card img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   border-radius: 10px 10px 0px 0px;
 }
 .container .card #sub-card .star,
@@ -226,7 +229,7 @@ header img {
 }
 .container .card #sub-card .sub-card-button,
 .container-seller .card #sub-card .sub-card-button {
-  margin: 10px;
+  margin: 5px;
   display: flex;
   justify-content: space-between;
 }
@@ -446,7 +449,7 @@ table img {
   width: 90px;
 }
 table thead {
-  background-color: darkblue;
+  background-color: rgb(24, 24, 66);
   color: white;
   font-size: larger;
 }
@@ -460,15 +463,19 @@ table tr td {
 table tr td:nth-child(1) img {
   width: 150px;
 }
+table tr td:nth-child(7) {
+  width: 100px;
+}
 table tr td:last-child div {
   margin-bottom: 10%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 table tr td:last-child div button {
-  width: 80%;
+  width: 150px;
   padding: 10px;
   margin-top: 10px;
   border: none;
@@ -477,11 +484,9 @@ table tr td:last-child div button {
 }
 table tr td:last-child div .delete {
   background-color: #FF4141;
-  color: white;
 }
 table tr td:last-child div .edit {
-  background-color: #41BBFF;
-  color: white;
+  background-color: orange;
 }
 
 .container-shopping-cart {
@@ -495,7 +500,7 @@ table tr td:last-child div .edit {
   align-items: center;
   width: 90%;
   border-radius: 10px;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .container-shopping-cart .shopping-cart .header-shopping-cart {
   display: flex;
@@ -523,6 +528,7 @@ table tr td:last-child div .edit {
 .container-shopping-cart .shopping-cart .contain-table table tr td {
   border: none;
   border-bottom: 1px solid black;
+  padding: 10px;
 }
 .container-shopping-cart .shopping-cart .contain-table table tr td button {
   border: 1px solid black;
@@ -575,4 +581,38 @@ table tr td:last-child div .edit {
   color: white;
   margin-left: 10px;
   box-shadow: rgba(212, 43, 43, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+footer {
+  margin-top: 5%;
+  background-color: rgb(24, 24, 66);
+  color: white;
+}
+footer div {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+footer div h3 {
+  margin: 2%;
+}
+footer div img {
+  width: 30px;
+  margin: 2%;
+  border-radius: 50%;
+}
+
+.buy-container {
+  display: flex;
+}
+.buy-container .container-left {
+  flex: 2;
+  background-color: #41BBFF;
+}
+.buy-container .container-right {
+  flex: 1;
+  background-color: orange;
+}
+.buy-container img {
+  width: 20%;
 }/*# sourceMappingURL=main.css.map */
