@@ -162,16 +162,18 @@ header img {
 }
 .popular-brand .brand {
   display: flex;
+  justify-content: space-evenly;
 }
 .popular-brand .brand #sub-brand {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30%;
-  height: 50%;
+  width: 12%;
+  height: 30%;
 }
 .popular-brand .brand #sub-brand img {
-  width: 75%;
+  width: 100%;
+  height: 150px;
   padding: 5px;
   border-radius: 50%;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -390,7 +392,8 @@ header img {
   background-color: rgba(0, 0, 0, 0.877);
   z-index: 99;
 }
-#add-product-dialog dialog {
+
+dialog {
   position: fixed;
   top: 10vh;
   left: 20%;
@@ -405,10 +408,10 @@ header img {
   padding: 0;
   color: rgba(0, 0, 0, 0.63);
 }
-#add-product-dialog dialog button:hover {
+dialog button:hover {
   background-color: orange;
 }
-#add-product-dialog dialog header {
+dialog header {
   background-color: darkblue;
   padding-top: 20px;
   height: 50px;
@@ -416,26 +419,36 @@ header img {
   font-size: larger;
   color: white;
 }
-#add-product-dialog dialog section {
+dialog section {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 1px;
   padding: 20px;
+  margin-right: 20px;
 }
-#add-product-dialog dialog section input {
-  padding: 5px;
+dialog section input {
+  width: 100%;
+  margin: 2px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid black;
 }
-#add-product-dialog dialog section select {
+dialog section div {
+  display: flex;
+  margin: 2px 0px 2px 0px;
+}
+dialog section select {
   padding: 5px;
   width: 200px;
+  border-radius: 10px;
 }
-#add-product-dialog dialog menu {
+dialog menu {
   padding: 1rem;
   display: flex;
   justify-content: flex-end;
   margin: 0;
 }
-#add-product-dialog dialog menu button {
+dialog menu button {
   padding: 10px;
   width: 100px;
   margin: 5px;
@@ -601,12 +614,12 @@ footer div {
   justify-content: center;
   border-bottom: 1px solid black;
 }
-footer div h3 {
+footer div h4 {
   margin: 2%;
 }
 footer div img {
   width: 30px;
-  margin: 2%;
+  margin: 1% 2% 1% 2%;
   border-radius: 50%;
 }
 
@@ -622,17 +635,27 @@ footer div img {
 .buy-container .container-left {
   flex: 2;
 }
+.buy-container .container-left dialog {
+  margin-top: 7%;
+}
 .buy-container .container-left .box {
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
   border: 1px solid lightgray;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   margin: 5px;
 }
-.buy-container .container-left .box h5 {
-  color: rgb(108, 108, 255);
+.buy-container .container-left .box button {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
-.buy-container .container-left .box h5:hover {
+.buy-container .container-left .box button h5 {
+  color: rgb(108, 108, 255);
+  margin: 0;
+  font-size: medium;
+}
+.buy-container .container-left .box button h5:hover {
   color: orange;
 }
 .buy-container .container-right {
@@ -660,4 +683,14 @@ footer div img {
 }
 .buy-container img {
   width: 20%;
+}
+
+.dialog-contain {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.877);
+  z-index: 99;
 }/*# sourceMappingURL=main.css.map */

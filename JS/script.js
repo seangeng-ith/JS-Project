@@ -7,6 +7,10 @@ const button_save = document.querySelector('#save');
 const detail = document.querySelector('.contain-detail')
 const web_title = document.querySelector('title').innerText;
 const add_product_form = document.querySelector('#add-product-dialog')
+const add_new_address = document.querySelector('#new-address');
+const select_payment =  document.querySelector('#select-payment');
+const dialog_address = document.querySelector('.address');
+const dialog_payment = document.querySelector('.payment-method');
 
 //BUTTON-------------------------------------------
 const button_create = document.querySelector('#create');
@@ -17,6 +21,7 @@ const button_exit = document.querySelector('#exit')
 const button_buy = document.querySelector('.btn-buy')
 const button_increase = document.querySelector('.increase')
 const button_decrease = document.querySelector('.decrease')
+const button_confirm = document.querySelector('#confirm')
 
 // Data------------------------------------------
 let product = [
@@ -615,6 +620,15 @@ if (web_title === 'Shopping Mall') {
 if (web_title === 'Cart Page') {
     DisplayShoppingCart()
 
+}
+
+if (web_title === 'Buy Pages'){
+    add_new_address.addEventListener('click',function(){
+        show(dialog_address)
+    })
+    select_payment.addEventListener('click',function(){
+        show(dialog_payment)
+    })
 }
 
 loadProduct()

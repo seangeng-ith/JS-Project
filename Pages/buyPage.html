@@ -77,11 +77,11 @@
         <div class="container-left">
             <div class="box addressing">
                 <h3>Shipping Address</h3>
-                <h5>+ Add New Address</h5>
+                <button id="new-address"><h5>+ Add New Address</h5></button>
             </div>
             <div class="box payment">
                 <h3>Payment Methods</h3>
-                <h5>+ Select Payment Method</h5>
+                <button id="select-payment"><h5>+ Select Payment Method</h5></button>
             </div>
             <div class="box card">
                 <img src="../Images/hoodie.jfif" alt="">
@@ -89,6 +89,61 @@
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, placeat.</p>
                     <p>US $5.4</p>
                 </div>
+            </div>
+            <div class="dialog-contain address" style="display: none;">
+                <dialog open >
+                    <header>Add New Address</header>
+                    <section>
+                        <label>Contact</label>
+                        <div class="contact">
+                            <input id="name" type="text" placeholder="Name of the prodcut" required>
+                            <input type="number" placeholder="Phone Number">
+                        </div>
+                        <label>Address</label>
+                        <div class="address">
+                            <input type="text" name="" id="street" placeholder="Street, house/apartement/unit*">
+                            <input type="text" placeholder="Apt, Suite, Unit etc. (optional)">
+                        </div>
+                        <div>
+                            <select>
+                                <option value="" selected disabled hidden>Choose Country</option>
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Thai">Thai</option>
+                                <option value="American">American</option>
+                            </select>
+                            <input type="text" name="" id="" placeholder="State/Province/Country">
+                            <input type="text" placeholder="City">
+                            <input type="number" name="" id="" placeholder="Zip/Postal Code">
+                        </div>
+
+                    </section>
+
+                    <menu>
+                        <button id="confirm" onclick="hide(dialog_address)">Confirm</button>
+                        <button id="cancel" onclick="hide(dialog_address)">Cancel</button>
+                    </menu>
+                </dialog>
+
+            </div>
+            <div class="dialog-contain payment-method" style="display: none;">
+                <dialog open  >
+                    <header>Payment Methods</header>
+                    <section>
+                        <div class="contact">
+                            <input id="name" type="number" placeholder="Card number" required>
+                            <input type="text" placeholder="Cardholder Name">
+                        </div>
+                        <div class="date">
+                            <input type="month" name="" placeholder="MM">
+                            <input type="number" placeholder="CVV">
+                        </div>
+
+                    </section>
+                    <menu>
+                        <button id="confirm" onclick="hide(dialog_payment)">Confirm</button>
+                        <button id="cancel" onclick="hide(dialog_payment)">Cancel</button>
+                    </menu>
+                </dialog>
             </div>
         </div>
         <div class="container-right">
